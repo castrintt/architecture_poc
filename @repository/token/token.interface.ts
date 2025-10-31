@@ -1,8 +1,4 @@
-import {JWT_DECODE_TOKEN} from "../../@domain/models/jwt/jwt.decode";
-
 export interface ITokenRepository {
-
-    decode(): Promise<JWT_DECODE_TOKEN | null>
 
     getAccessToken(): Promise<string | null>
 

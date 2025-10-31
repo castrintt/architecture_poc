@@ -1,8 +1,6 @@
 import {SecureStore} from "@libs/storage/imports";
-import {JWT_DECODE_TOKEN} from "../../@domain/models/jwt/jwt.decode";
 import {ITokenRepository} from "./token.interface";
 import {STORE_KEYS} from "@utils/STORE_KEYS";
-import {jwtDecode} from "jwt-decode";
 
 export class TokenRepository implements ITokenRepository {
     private cachedToken: string | null = null;
@@ -20,16 +18,6 @@ export class TokenRepository implements ITokenRepository {
         const accessToken = await SecureStore.GET_ASYNC(STORE_KEYS.TOKEN.ACCESS_TOKEN)
         this.cachedToken = accessToken
         return accessToken
-    }
-
-    async decode(): Promise<JWT_DECODE_TOKEN | null> {
-        const token = await this.getAccessToken()
-        if (!token) return null
-        try {
-            return jwtDecode<JWT_DECODE_TOKEN>(token);
-        } catch (_) {
-            return null;
-        }
     }
 
     public async setAccessToken(token: string): Promise<void> {

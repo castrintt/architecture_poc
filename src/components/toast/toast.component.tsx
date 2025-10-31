@@ -11,17 +11,17 @@ import {
 } from 'react-native';
 import {Style} from './toast.styles';
 import {ToastTypes} from './toast.types';
-import {EToastTypes} from "../../../@domain/enum/toastTypes.enum";
+import {EToastType} from "@domain/enum/EToastTypes";
 
 export function ToastComponent({message, type, visible}: ToastTypes) {
     const widthAnim = useRef(new Animated.Value(0.9)).current;
     const renderTitleByType = () => {
         switch (type) {
-            case EToastTypes.SUCCESS:
+            case EToastType.SUCCESS:
                 return 'Sucesso!';
-            case EToastTypes.ERROR:
+            case EToastType.ERROR:
                 return 'Erro!';
-            case EToastTypes.WARNING:
+            case EToastType.WARNING:
                 return 'Atenção!';
             default:
                 return 'Sucesso!';
@@ -30,11 +30,11 @@ export function ToastComponent({message, type, visible}: ToastTypes) {
 
     function renderIcon() {
         switch (type) {
-            case EToastTypes.SUCCESS:
+            case EToastType.SUCCESS:
                 return <SuccessToastSvg/>;
-            case EToastTypes.ERROR:
+            case EToastType.ERROR:
                 return <AttentionSvg/>;
-            case EToastTypes.WARNING:
+            case EToastType.WARNING:
                 return <AttentionSvg/>;
             default:
                 return <AttentionSvg/>;

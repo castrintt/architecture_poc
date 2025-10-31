@@ -1,7 +1,7 @@
-import {EToastTypes} from '@enums/toastTypes.enum';
+import {EToastType} from "@enums/EToastTypes";
 
 export type ToastTypes = {
-    type: EToastTypes;
+    type: EToastType;
     message: string;
     visible: boolean
 };

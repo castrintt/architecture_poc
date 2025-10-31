@@ -1,20 +1,20 @@
 import {StyleSheet}  from "react-native";
-import {EToastTypes} from "@enums/toastTypes.enum";
+import {EToastType} from "@enums/EToastTypes";
 
-const renderColorByType = (type: EToastTypes) => {
+const renderColorByType = (type: EToastType) => {
     switch (type) {
-        case EToastTypes.SUCCESS:
+        case EToastType.SUCCESS:
             return "#00A124";
-        case EToastTypes.ERROR:
+        case EToastType.ERROR:
             return 'red';
-        case EToastTypes.WARNING:
+        case EToastType.WARNING:
             return "#FF7223";
         default:
             return "#00A124";
     }
 };
 
-export const Style = (type: EToastTypes) =>
+export const Style = (type: EToastType) =>
     StyleSheet.create({
         base: {
             zIndex: 5,

@@ -1,4 +1,3 @@
-import {EHttpStatusCode} from "@enums/statusCode.enum";
 import {GenerateAccessTokenResponse} from "@domain/models/auth/generateAccessTokenResponse";
 import {IAuthGateway} from "./auth.interface";
 import {axios_instances} from "@libs/axios/axios.instances";
@@ -11,7 +10,7 @@ export class AuthGateway implements IAuthGateway {
         const builder = {login, password}
         return axios_instances.PUBLIC.post<GenerateAccessTokenResponse>("Authentication/[END-POINT]", builder).
             then(async ({data, status}) => {
-                if (status !== EHttpStatusCode.OK) return null;
+                if (status !== 200) return null;
                 return data
             }).
             catch(() => null)

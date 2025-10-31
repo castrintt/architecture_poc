@@ -1,16 +1,16 @@
 import * as Axios from "axios";
-import {EToastTypes} from "@enums/toastTypes.enum";
 import {INTERCEPTOR_MESSAGES} from "@libs/axios/interceptors/messages.interceptor";
 import {messageNotification} from "@components/toast/toast.call";
+import {EToastType} from "@enums/EToastTypes";
 
 
 function noConnectionErrorHandler(config: Axios.InternalAxiosRequestConfig) {
-    messageNotification(INTERCEPTOR_MESSAGES._no_internet_connection, EToastTypes.ERROR);
+    messageNotification(INTERCEPTOR_MESSAGES._no_internet_connection, EToastType.ERROR);
     return config;
 }
 
 function connectionIsNotReachableErrorHandler(config: Axios.InternalAxiosRequestConfig) {
-    messageNotification(INTERCEPTOR_MESSAGES._slow_connection, EToastTypes.ERROR);
+    messageNotification(INTERCEPTOR_MESSAGES._slow_connection, EToastType.ERROR);
     return config;
 }
 

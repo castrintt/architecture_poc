@@ -1,26 +1,26 @@
 import {ToastConfig, ToastConfigParams} from 'react-native-toast-message';
-import {ToastComponent}                 from './toast.component';
-import {EToastTypes}                    from "@enums/toastTypes.enum";
+import {ToastComponent} from './toast.component';
+import {EToastType} from "@enums/EToastTypes";
 
 export const toastConfiguration: ToastConfig = {
     success: ({text1, isVisible}: ToastConfigParams<any>) => (
         <ToastComponent
             message={text1 ?? ''}
-            type={EToastTypes.SUCCESS}
+            type={EToastType.SUCCESS}
             visible={isVisible}
         />
     ),
     error: ({text1, isVisible}: ToastConfigParams<any>) => (
         <ToastComponent
             message={text1 ?? ''}
-            type={EToastTypes.ERROR}
+            type={EToastType.ERROR}
             visible={isVisible}
         />
     ),
     warning: ({text1, isVisible}: ToastConfigParams<any>) => (
         <ToastComponent
             message={text1 ?? ''}
-            type={EToastTypes.WARNING}
+            type={EToastType.WARNING}
             visible={isVisible}
         />
     )

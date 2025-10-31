@@ -1,12 +1,12 @@
-import {EHttpStatusCode} from "@enums/statusCode.enum";
 import {messageNotification} from "@components/toast/toast.call";
-import {EToastTypes} from "@enums/toastTypes.enum";
 import {AxiosInstance} from "axios";
 import {INTERCEPTOR_MESSAGES} from "@libs/axios/interceptors/messages.interceptor";
+import EHttpStatus from "@enums/EHttpStatus";
+import {EToastType} from "@enums/EToastTypes";
 
 async function serverSideErrorMiddlewareHandler(error: any) {
-    const serverSideErrorSubject = String(EHttpStatusCode.INTERNAL_SERVER_ERROR);
-    if (error.message.includes(serverSideErrorSubject)) messageNotification(INTERCEPTOR_MESSAGES._server_side_error, EToastTypes.ERROR);
+    const serverSideErrorSubject = String(EHttpStatus.INTERNAL_SERVER_ERROR);
+    if (error.message.includes(serverSideErrorSubject)) messageNotification(INTERCEPTOR_MESSAGES._server_side_error, EToastType.ERROR);
     return Promise.reject(error);
 }
 

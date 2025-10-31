@@ -1,15 +1,16 @@
 import {Text, TouchableOpacity, View} from "react-native";
 import type {ButtonTypes} from "./button.types";
-import {EButtonCommonStyle} from "../../../@domain/enum/buttonStyle.enum";
+
 import {useFocusEffect} from "@react-navigation/core";
 import {memo, useCallback, useState} from "react";
+import {EButtonStyle} from "@enums/EButtonStyle";
 
 const Button = ({
     onPress,
     description,
     maxWidth,
     maxHeight,
-    style = EButtonCommonStyle.PRIMARY,
+    style = EButtonStyle.PRIMARY,
     icon,
     disabled = false,
     accessibilityLabel
@@ -23,9 +24,9 @@ const Button = ({
 
     function executeActionToJoinTextStyles() {
         const existingTextStyleOptions = {
-            [EButtonCommonStyle.PRIMARY]: "color-black text-lg text-base",
-            [EButtonCommonStyle.SECONDARY]: "color-white text-neutral-100 ",
-            [EButtonCommonStyle.TRANSPARENT]: "color-black text-primary-500",
+            [EButtonStyle.PRIMARY]: "color-black text-lg text-base",
+            [EButtonStyle.SECONDARY]: "color-white text-neutral-100 ",
+            [EButtonStyle.TRANSPARENT]: "color-black text-primary-500",
         };
         const joinedString = existingTextStyleOptions[style];
         setDefaultTextStyles((prev) =>
@@ -35,11 +36,11 @@ const Button = ({
 
     function executeActionToJoinButtonStyles() {
         const existingButtonStyleOptions = {
-            [EButtonCommonStyle.PRIMARY]:
+            [EButtonStyle.PRIMARY]:
                 "bg-[blue] rounded border-0 h-10 px-3 py-3",
-            [EButtonCommonStyle.SECONDARY]:
+            [EButtonStyle.SECONDARY]:
                 "bg-[purple] rounded-md border-0 h-10 px-3",
-            [EButtonCommonStyle.TRANSPARENT]:
+            [EButtonStyle.TRANSPARENT]:
                 "bg-transparent rounded-md border-primary-500 h-9",
         };
         const joinedString = existingButtonStyleOptions[style];

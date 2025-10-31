@@ -4,9 +4,9 @@ import {LinearGradient} from "expo-linear-gradient";
 import {Ionicons} from "@expo/vector-icons";
 import CommonInput from "@components/input/commonInput";
 import Button from "@components/button/Button";
-import {EButtonCommonStyle} from "@domain/enum/buttonStyle.enum";
 import {LoginControllerType} from "@pages/public/login/login.types";
 import {Styles} from "@pages/public/login/login.styles";
+import {EButtonStyle} from "@enums/EButtonStyle";
 
 
 function LoginComponent({controller}: LoginControllerType) {
@@ -62,7 +62,7 @@ function LoginComponent({controller}: LoginControllerType) {
                         accessibilityLabel={'submit-button'}
                         description="Entrar"
                         onPress={controller.actions.onSubmit}
-                        style={EButtonCommonStyle.PRIMARY}
+                        style={EButtonStyle.PRIMARY}
                     />
                 </View>
             </View>
