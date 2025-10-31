@@ -24,9 +24,9 @@ const Button = ({
 
     function executeActionToJoinTextStyles() {
         const existingTextStyleOptions = {
-            [EButtonStyle.PRIMARY]: "color-black text-lg text-base",
-            [EButtonStyle.SECONDARY]: "color-white text-neutral-100 ",
-            [EButtonStyle.TRANSPARENT]: "color-black text-primary-500",
+            [EButtonStyle.PRIMARY]: "text-white text-lg text-base",
+            [EButtonStyle.SECONDARY]: "text-white text-neutral-100",
+            [EButtonStyle.TRANSPARENT]: "text-primary-500",
         };
         const joinedString = existingTextStyleOptions[style];
         setDefaultTextStyles((prev) =>
@@ -37,7 +37,7 @@ const Button = ({
     function executeActionToJoinButtonStyles() {
         const existingButtonStyleOptions = {
             [EButtonStyle.PRIMARY]:
-                "bg-[blue] rounded border-0 h-10 px-3 py-3",
+                "bg-[red] rounded border-0 h-10 px-3 py-3",
             [EButtonStyle.SECONDARY]:
                 "bg-[purple] rounded-md border-0 h-10 px-3",
             [EButtonStyle.TRANSPARENT]:

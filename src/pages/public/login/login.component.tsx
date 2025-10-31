@@ -5,7 +5,6 @@ import {Ionicons} from "@expo/vector-icons";
 import CommonInput from "@components/input/commonInput";
 import Button from "@components/button/Button";
 import {LoginControllerType} from "@pages/public/login/login.types";
-import {Styles} from "@pages/public/login/login.styles";
 import {EButtonStyle} from "@enums/EButtonStyle";
 
 
@@ -14,13 +13,12 @@ function LoginComponent({controller}: LoginControllerType) {
         <LinearGradient
             colors={[
                 "white",
-                "black"
+                "white"
             ]}
-            style={Styles.linearGradientComponent}
+            className="flex-1 justify-center items-center px-4"
         >
             <View
-                className="w-full max-w-md bg-white rounded-xl p-8 shadow-lg z-10"
-                style={Styles.loginForm}
+                className="w-full max-w-md bg-white rounded-xl p-8 shadow-lg"
                 accessibilityLabel={'login-form'}
             >
                 <View className="mb-2">
@@ -67,8 +65,7 @@ function LoginComponent({controller}: LoginControllerType) {
                 </View>
             </View>
         </LinearGradient>
-    )
-        ;
+    );
 }
 
 export default React.memo(LoginComponent);
