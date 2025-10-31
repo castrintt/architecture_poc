@@ -1,0 +1,91 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "types": [
+      "jest",
+      "@testing-library/jest-native",
+      "node"
+    ],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@extensions/*": [
+        "./src/extensions/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@router/*": [
+        "./src/routes/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@global/*": [
+        "./src/globals/*"
+      ],
+      "@store/*": [
+        "./src/stores/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@libs/*": [
+        "./@libs/*"
+      ],
+      "@enums/*": [
+        "./@domain/enum/*"
+      ],
+      "@models*": [
+        "./@domain/models/*"
+      ],
+      "@IoC/*": [
+        "./@IoC/*"
+      ],
+      "@facade/*": [
+        "./@facade/*"
+      ],
+      "@gateway/*": [
+        "./@gateway/*"
+      ],
+      "@service/*": [
+        "./@service/*"
+      ],
+      "@repository/*": [
+        "./@repository/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@tests/*": [
+        "./@tests/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "nativewind-env.d.ts",
+    "jest-setup.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}

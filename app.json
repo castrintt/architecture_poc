@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "ProjectMobile",
+    "slug": "ProjectMobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/png/random_image.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "extra": {
+      "TOKEN": "access_token",
+      "URL": {
+        "LOCAL": "http://10.0.2.2:5032/api/",
+        "HML": "https://10.0.2.2:7212/api/",
+        "PROD": "https://10.0.2.2:7212/api/"
+      },
+      "eas": {
+        "projectId": ""
+      }
+    },
+    "splash": {
+      "image": "./src/assets/png/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#2C3E50"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE",
+        "POST_NOTIFICATIONS"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/png/random_image.png",
+        "backgroundColor": "#2C3E50"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.Project.Mobile"
+    },
+    "plugins": [
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ],
+      "expo-font",
+      "expo-secure-store"
+    ],
+    "owner": "Castro"
+  }
+}

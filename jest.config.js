@@ -1,0 +1,52 @@
+module.exports = {
+    preset: 'jest-expo',
+    setupFilesAfterEnv: ['<rootDir>/jest-setup.ts', '@testing-library/jest-native/extend-expect',],
+    transformIgnorePatterns: [
+        'node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg|@shopify/flash-list|react-redux|@reduxjs/toolkit)',
+    ],
+    moduleNameMapper: {
+        '^@/(.*)$': '<rootDir>/src/$1',
+        '^@pages/(.*)$': '<rootDir>/src/pages/$1',
+        '^@extensions/(.*)$': '<rootDir>/src/extensions/$1',
+        '^@components/(.*)$': '<rootDir>/src/integration/$1',
+        '^@router/(.*)$': '<rootDir>/src/routes/$1',
+        '^@global/(.*)$': '<rootDir>/src/globals/$1',
+        '^@store/(.*)$': '<rootDir>/src/stores/$1',
+        '^@assets/(.*)$': '<rootDir>/assets/$1',
+        '^@libs/(.*)$': '<rootDir>/@libs/$1',
+        '^@enums/(.*)$': '<rootDir>/@domain/enum/$1',
+        '^@gateway/(.*)$': '<rootDir>/@gateway/$1',
+        '^@service/(.*)$': '<rootDir>/@service/$1',
+        '^@facade/(.*)$': '<rootDir>/@facade/$1',
+        '^@model/(.*)$': '<rootDir>/@domain/models/$1',
+        '^@repository/(.*)$': '<rootDir>/@repository/$1',
+        '^@utils/(.*)$': '<rootDir>/src/utils/$1',
+    },
+    testMatch: [
+        '**/__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(spec|test).[jt]s?(x)',
+    ],
+    testPathIgnorePatterns: [
+        '/node_modules/',
+        '/android/',
+        '/ios/',
+        '/.expo/',
+        '/@tests/e2e',
+    ],
+    collectCoverageFrom: [
+        'src/**/*.{ts,tsx}',
+        '!src/**/*.d.ts',
+        '!src/**/*.types.ts',
+        '!src/**/index.ts',
+    ],
+    coverageThreshold: {
+        global: {
+            branches: 0,
+            functions: 0,
+            lines: 0,
+            statements: 0,
+        },
+    },
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+    testEnvironment: 'node',
+};
