@@ -1,4 +1,4 @@
-import "reflect-meta-data"
+import "reflect-metadata"
 import "@core/IoC/IoC.container"
 import React, {useEffect, useState} from "react";
 import * as SplashScreen from "expo-splash-screen";
