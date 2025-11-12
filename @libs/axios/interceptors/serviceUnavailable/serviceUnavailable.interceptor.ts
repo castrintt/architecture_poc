@@ -1,8 +1,9 @@
 import {messageNotification} from "@components/toast/toast.call";
 import * as Axios from "axios";
 import {INTERCEPTOR_MESSAGES} from "@libs/axios/interceptors/messages.interceptor";
-import EHttpStatus from "@enums/EHttpStatus";
-import {EToastType} from "@enums/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
+import {EHttpStatus} from "@domain/enum/EHttpStatus.enum";
+
 
 export async function serviceUnavailableMiddlewareHandler(error: any) {
     const subject = String(EHttpStatus.SERVICE_UNAVAILABLE);

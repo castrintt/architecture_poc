@@ -1,4 +1,4 @@
-import {EToastType} from "@enums/EToastTypes";
+import type {EToastType} from "@domain/enum/EToastType.enum";
 
 export type ToastTypes = {
     type: EToastType;

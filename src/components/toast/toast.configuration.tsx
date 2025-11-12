@@ -1,6 +1,6 @@
 import {ToastConfig, ToastConfigParams} from 'react-native-toast-message';
 import {ToastComponent} from './toast.component';
-import {EToastType} from "@enums/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
 
 export const toastConfiguration: ToastConfig = {
     success: ({text1, isVisible}: ToastConfigParams<any>) => (

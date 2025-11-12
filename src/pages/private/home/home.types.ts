@@ -1,5 +1,5 @@
 type Actions = {
-    [key: string]: any
+    logout:() => void
 };
 
 type States = {

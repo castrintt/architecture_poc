@@ -2,9 +2,11 @@ import {useForm} from "react-hook-form";
 import {LoginControllerInjectTypes} from "@pages/public/login/login.types";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {LoginFormData, loginResolver} from "@pages/public/login/login.resolver";
+import store from "@store/store";
+import {login} from "@store/slices/user/reducer";
 
 
-function UseLoginController({authService}: LoginControllerInjectTypes) {
+function UseLoginController({userService}: LoginControllerInjectTypes) {
     const {
         control,
         handleSubmit,
@@ -18,8 +20,8 @@ function UseLoginController({authService}: LoginControllerInjectTypes) {
         },
     });
 
-    const onSubmit = handleSubmit(async (data: LoginFormData) => {
-        await authService.generateTokenAsync(data.email, data.password)
+    const onSubmit = handleSubmit(async (_: LoginFormData) => {
+        if (userService) store.dispatch(login())
     });
 
 

@@ -1,5 +1,5 @@
 import Toast from 'react-native-toast-message';
-import {EToastType} from "@domain/enum/EToastTypes";
+import type {EToastType} from "@domain/enum/EToastType.enum";
 
 export const callToast = (message: string, type: EToastType, visibilityTime: number = 3000) => {
     Toast.show({

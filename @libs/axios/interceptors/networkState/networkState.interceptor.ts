@@ -1,7 +1,7 @@
 import {messageNotification} from "@components/toast/toast.call";
 import * as Axios from "axios";
 import {INTERCEPTOR_MESSAGES} from "@libs/axios/interceptors/messages.interceptor";
-import {EToastType} from "@enums/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
 
 export async function networkStateConnectionMiddlewareHandler(error: any) {
     if (error.message.includes('ExpoNetwork.getNetworkStateAsync') || error.message.includes('Network Error')) messageNotification(INTERCEPTOR_MESSAGES._no_connection, EToastType.ERROR);

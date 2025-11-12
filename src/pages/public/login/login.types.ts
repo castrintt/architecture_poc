@@ -1,6 +1,6 @@
-import {IAuthService} from "@service/auth/auth.interface";
 import {BaseSyntheticEvent} from "react";
 import {Control, FieldErrors} from "react-hook-form";
+import type {IUserService} from "@application/contracts/user.interface";
 
 type Actions = {
     onSubmit: (e?: BaseSyntheticEvent) => Promise<void>
@@ -30,5 +30,5 @@ export type LoginControllerType = {
 };
 
 export type LoginControllerInjectTypes = {
-    authService: IAuthService;
+    userService: IUserService;
 }

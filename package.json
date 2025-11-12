@@ -23,6 +23,7 @@
     "wdio:spec": "wdio run ./wdio.conf.ts --spec [Absolute path here] --watch"
   },
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.28.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@expo/vector-icons": "^15.0.2",
     "@hookform/resolvers": "^5.2.2",
@@ -36,6 +37,7 @@
     "appium": "^3.1.0",
     "axios": "^1.12.2",
     "babel-plugin-module-resolver": "^5.0.2",
+    "babel-plugin-transform-typescript-metadata": "^0.4.0",
     "expo": "54.0.21",
     "expo-constants": "^18.0.9",
     "expo-device": "~8.0.9",
@@ -44,6 +46,7 @@
     "expo-network": "^8.0.7",
     "expo-secure-store": "~15.0.7",
     "expo-splash-screen": "^31.0.10",
+    "inversify": "^7.10.4",
     "jwt-decode": "^4.0.0",
     "lodash": "^4.17.21",
     "nativewind": "^4.2.1",
@@ -61,6 +64,7 @@
     "react-native-walkthrough-tooltip": "^1.6.0",
     "react-native-worklets": "^0.5.1",
     "react-redux": "^9.2.0",
+    "reflect-metadata": "^0.2.2",
     "webdriverio": "^9.20.0",
     "zod": "^3.25.76"
   },

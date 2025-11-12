@@ -3,7 +3,7 @@ import type {ButtonTypes} from "./button.types";
 
 import {useFocusEffect} from "@react-navigation/core";
 import {memo, useCallback, useState} from "react";
-import {EButtonStyle} from "@enums/EButtonStyle";
+import {EButtonStyle} from "@domain/enum/EButtonStyle.enum";
 
 const Button = ({
     onPress,

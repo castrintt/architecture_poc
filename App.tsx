@@ -1,3 +1,5 @@
+import "reflect-meta-data"
+import "@core/IoC/IoC.container"
 import React, {useEffect, useState} from "react";
 import * as SplashScreen from "expo-splash-screen";
 import {Provider} from "react-redux";
@@ -10,19 +12,17 @@ import {initializeAxiosInterceptors} from '@libs/axios/axios.instances';
 export default function App() {
     const [isReady, setIsReady] = useState(false);
 
-    useEffect(() => {
-        async function prepare() {
-            try {
-                await SplashScreen.preventAutoHideAsync();
-                await initializeAxiosInterceptors();
-            } catch (e) {
-                console.warn('Error during app initialization:', e);
-            } finally {
-                setIsReady(true);
-                await SplashScreen.hideAsync();
-            }
+    async function prepare() {
+        try {
+            await SplashScreen.preventAutoHideAsync();
+            await initializeAxiosInterceptors();
+        } finally {
+            setIsReady(true);
+            await SplashScreen.hideAsync();
         }
+    }
 
+    useEffect(() => {
         prepare().then();
     }, []);
 

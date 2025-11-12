@@ -1,7 +1,7 @@
 import {messageNotification} from "@components/toast/toast.call";
 import * as Axios from "axios";
 import {INTERCEPTOR_MESSAGES} from "@libs/axios/interceptors/messages.interceptor";
-import {EToastType} from "@enums/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
 
 const ERR_NETWORK = 'ERR_NETWORK';
 

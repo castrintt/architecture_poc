@@ -5,7 +5,7 @@ import {Ionicons} from "@expo/vector-icons";
 import CommonInput from "@components/input/commonInput";
 import Button from "@components/button/Button";
 import {LoginControllerType} from "@pages/public/login/login.types";
-import {EButtonStyle} from "@enums/EButtonStyle";
+import {EButtonStyle} from "@domain/enum/EButtonStyle.enum";
 
 
 function LoginComponent({controller}: LoginControllerType) {

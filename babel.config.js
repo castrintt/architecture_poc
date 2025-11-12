@@ -6,6 +6,8 @@ module.exports = function (api) {
             "nativewind/babel",
         ],
         plugins: [
+            ['@babel/plugin-proposal-decorators', { legacy: true }],
+            'babel-plugin-transform-typescript-metadata',
             "react-native-reanimated/plugin",
             "@babel/plugin-proposal-export-namespace-from",
             [
@@ -22,13 +24,12 @@ module.exports = function (api) {
                         "@store": "./src/stores",
                         "@assets": "./src/assets",
                         "@libs": "./@libs",
-                        "@enums": "./@domain/enum",
-                        "@models*": "./@domain/models",
-                        "@IoC": "./@IoC",
-                        "@facade": "./@facade",
-                        "@gateway": "./@gateway",
-                        "@service": "./@service",
-                        "@repository": "./@repository",
+                        "@domain": "./@business/domain",
+                        "@api": "./@business/api",
+                        "@application": "./@business/application",
+                        "@core": "./@business/core",
+                        "@shared": "./@business/shared",
+                        "@repository": "./@business/repository",
                         "@utils": "./src/utils",
                         "@tests": "./@tests"
 

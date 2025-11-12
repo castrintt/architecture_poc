@@ -1,11 +1,15 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "isolatedModules": false,
     "strict": true,
     "types": [
       "jest",
       "@testing-library/jest-native",
-      "node"
+      "node",
+      "reflect-metadata"
     ],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -14,7 +18,6 @@
     "moduleResolution": "bundler",
     "allowJs": true,
     "noEmit": true,
-    "isolatedModules": true,
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
@@ -45,27 +48,27 @@
       "@libs/*": [
         "./@libs/*"
       ],
-      "@enums/*": [
-        "./@domain/enum/*"
+      "@domain/*": [
+        "./@business/domain/*"
       ],
-      "@models*": [
-        "./@domain/models/*"
+      "@api/*": [
+        "./@business/api/*"
       ],
-      "@IoC/*": [
-        "./@IoC/*"
+      "@application/*": [
+        "./@business/application/*"
       ],
-      "@facade/*": [
-        "./@facade/*"
+
+      "@core/*": [
+        "./@business/core/*"
       ],
-      "@gateway/*": [
-        "./@gateway/*"
-      ],
-      "@service/*": [
-        "./@service/*"
+
+      "@shared/*": [
+        "./@business/shared/*"
       ],
       "@repository/*": [
-        "./@repository/*"
+        "./@business/repository/*"
       ],
+
       "@utils/*": [
         "./src/utils/*"
       ],

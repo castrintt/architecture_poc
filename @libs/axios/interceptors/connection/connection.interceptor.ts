@@ -1,7 +1,7 @@
 import * as Axios from "axios";
 import {INTERCEPTOR_MESSAGES} from "@libs/axios/interceptors/messages.interceptor";
 import {messageNotification} from "@components/toast/toast.call";
-import {EToastType} from "@enums/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
 
 
 function noConnectionErrorHandler(config: Axios.InternalAxiosRequestConfig) {

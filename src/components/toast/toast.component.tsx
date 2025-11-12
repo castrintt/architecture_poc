@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import {Style} from './toast.styles';
 import {ToastTypes} from './toast.types';
-import {EToastType} from "@domain/enum/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
 
 export function ToastComponent({message, type, visible}: ToastTypes) {
     const widthAnim = useRef(new Animated.Value(0.9)).current;

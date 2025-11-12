@@ -1,6 +1,6 @@
 import type {ReactNode} from "react";
 import type {DimensionValue} from "react-native";
-import {EButtonStyle} from "@enums/EButtonStyle";
+import type {EButtonStyle} from "@domain/enum/EButtonStyle.enum";
 
 export interface ButtonTypes {
     onPress?: () => void;

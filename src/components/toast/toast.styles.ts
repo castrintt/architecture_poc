@@ -1,5 +1,5 @@
 import {StyleSheet}  from "react-native";
-import {EToastType} from "@enums/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
 
 const renderColorByType = (type: EToastType) => {
     switch (type) {

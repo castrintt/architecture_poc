@@ -2,7 +2,6 @@ import {lazy, Suspense} from "react";
 import UseHomeController from "./home.controller";
 import {View} from "react-native";
 
-
 const HomeComponent = lazy(() => import("./home.component"));
 
 function Home() {

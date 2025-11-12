@@ -1,25 +1,27 @@
 # Architecture POC - React Native
 
-Prova de conceito (POC) de arquitetura em camadas para aplicações React Native, implementando padrões como Inversion of Control (IoC), Repository Pattern, Gateway Pattern e separação clara de responsabilidades.
+Prova de conceito (POC) de arquitetura em camadas para aplicações React Native, implementando padrões como **Clean Architecture**, **DDD**, **Inversion of Control (IoC)** com **Inversify**, Repository Pattern, Gateway Pattern, Adapter Pattern e separação clara de responsabilidades.
 
 ## 📋 Sobre o Projeto
 
-Este é um **projeto base construído do zero** para demonstrar uma arquitetura escalável e testável para aplicações React Native. O objetivo é estabelecer uma fundação sólida com boas práticas de desenvolvimento, facilitando a manutenção e evolução do código.
+Este é um **projeto base construído do zero** para demonstrar uma arquitetura escalável, testável e manutenível para aplicações React Native enterprise. O projeto implementa princípios SOLID e design patterns de forma pragmática, estabelecendo uma fundação robusta para aplicações de grande escala.
 
 ### Estado Atual
 
-O projeto implementa uma estrutura completa com:
-- ✅ Arquitetura em camadas implementada
-- ✅ IoC Container configurado
-- ✅ Sistema de autenticação básico
-- ✅ Tela de Login com validação (React Hook Form + Zod)
-- ✅ Tela Home (área privada)
-- ✅ Navegação Stack + Drawer configurada
-- ✅ Axios com interceptors customizados
-- ✅ Componentes reutilizáveis (Button, Input, Select, Toast, Tooltip)
-- ✅ Redux configurado
-- ✅ Testes unitários configurados
-- ✅ Testes E2E configurados (WebDriverIO + Appium)
+O projeto implementa uma estrutura completa e production-ready com:
+- ✅ **Arquitetura em camadas** (Clean Architecture + DDD)
+- ✅ **Inversify IoC Container** com injeção de dependências
+- ✅ **Sistema modular** com bindings e containers organizados
+- ✅ **Tela de Login** com validação (React Hook Form + Zod)
+- ✅ **Tela Home** (área privada protegida)
+- ✅ **Navegação** Stack + Drawer configurada
+- ✅ **Axios** com interceptors customizados e error handling
+- ✅ **Componentes** reutilizáveis (Button, Input, Select, Toast, Tooltip)
+- ✅ **Redux Toolkit** para gerenciamento de estado
+- ✅ **Testes unitários** com Jest configurados
+- ✅ **Testes E2E** com WebDriverIO + Appium
+- ✅ **TypeScript** com path aliases e strict mode
+- ✅ **NativeWind** (Tailwind CSS) para estilização
 
 ## 🛠 Tecnologias e Dependências
 
@@ -46,6 +48,10 @@ O projeto implementa uma estrutura completa com:
 
 ### HTTP e Comunicação
 - **Axios** (1.12.2) - Cliente HTTP
+
+### Injeção de Dependências
+- **Inversify** (7.10.4) - Framework IoC container
+- **Reflect Metadata** (0.2.2) - Decorators support
 
 ### Storage e Segurança
 - **Expo SecureStore** - Armazenamento seguro de dados sensíveis

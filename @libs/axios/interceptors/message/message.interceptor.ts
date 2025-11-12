@@ -1,6 +1,6 @@
 import {AxiosInstance} from "axios";
 import {messageNotification} from "@components/toast/toast.call";
-import {EToastType} from "@enums/EToastTypes";
+import {EToastType} from "@domain/enum/EToastType.enum";
 
 export function catchResponseErrorMessage(INSTANCE: AxiosInstance) {
 
