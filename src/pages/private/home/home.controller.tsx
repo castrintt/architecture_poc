@@ -1,14 +1,14 @@
 import store from "@store/store";
-import {login} from "@store/slices/user/reducer";
+import {logout} from "@store/slices/user/reducer";
 
 function UseHomeController() {
-    function logout() {
-        store.dispatch(login())
+    function logoutApp() {
+        store.dispatch(logout())
     }
 
     return {
         actions: {
-            logout
+            logout: logoutApp
         },
         states: {}
     };

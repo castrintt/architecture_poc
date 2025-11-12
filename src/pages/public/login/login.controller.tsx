@@ -12,7 +12,6 @@ function UseLoginController({userService}: LoginControllerInjectTypes) {
         handleSubmit,
         formState
     } = useForm<LoginFormData>({
-        mode: "onChange",
         resolver: zodResolver(loginResolver),
         defaultValues: {
             email: "",
